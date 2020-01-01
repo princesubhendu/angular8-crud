@@ -1,0 +1,19 @@
+<div class="col-md-6 material-container">
+    <h2 class="text-center">Edit Material</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id" readonly="true">
+      </div>
+      <div class="form-group">
+        <label for="materialname">Material Name:</label>
+        <input type="text" formControlName="name" placeholder="materialname" name="materialname" class="form-control" id="materialname" >
+      </div>
+  
+      <div class="form-group">
+        <label for="firstName">Price:</label>
+        <input formControlName="price" placeholder="Price" name="price" class="form-control" id="price">
+      </div>
+      
+      <button class="btn btn-success">Update</button>
+    </form>
+  </div>

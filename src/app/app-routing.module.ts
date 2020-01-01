@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import {AddMaterialComponent} from "./add-material/add-material.component";
+import {ListMaterialComponent} from "./list-material/list-material.component";
+import {EditMaterialComponent} from "./edit-material/edit-material.component";
 
+const routes: Routes = [
+  { path: 'add-material', component: AddMaterialComponent },
+  { path: 'list-material', component: ListMaterialComponent },
+  { path: 'edit-material', component: EditMaterialComponent }
+];
 
-const routes: Routes = [];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export const routing = RouterModule.forRoot(routes);
